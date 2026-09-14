@@ -4,54 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You — Custom Pest Control Scottsboro</title>
-  <meta http-equiv="refresh" content="8; url=/">
+  <meta http-equiv="refresh" content="20; url=/">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      background: #f7f7f7;
+      background: #f0f4f0;
       color: #222;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
+      padding: 20px;
+    }
+    .wrap { max-width: 560px; width: 100%; }
+    .logo { text-align: center; margin-bottom: 24px; }
+    .logo img { max-height: 80px; width: auto; }
+    .logo-text {
+      font-size: 1.6rem; font-weight: 800; color: #2e7d32; letter-spacing: -0.5px;
+    }
+    .logo-text span {
+      display: block; font-size: 0.85rem; font-weight: 500; color: #666;
+      letter-spacing: 1px; text-transform: uppercase; margin-top: 2px;
     }
     .card {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      padding: 48px 40px;
-      text-align: center;
-      max-width: 480px;
+      background: #fff; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+      padding: 40px 36px; text-align: center;
     }
     .check {
-      font-size: 48px;
-      color: #2e7d32;
-      margin-bottom: 16px;
+      width: 64px; height: 64px; border-radius: 50%; background: #2e7d32; color: #fff;
+      font-size: 36px; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
     }
-    h1 { font-size: 1.6rem; margin: 0 0 12px; }
-    p { font-size: 1.05rem; color: #555; line-height: 1.6; margin: 0 0 8px; }
-    .back {
-      display: inline-block;
-      margin-top: 24px;
-      padding: 12px 28px;
-      background: #2e7d32;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
+    h1 { font-size: 1.7rem; margin-bottom: 10px; color: #1b5e20; }
+    .card > p { font-size: 1.05rem; color: #555; line-height: 1.6; margin-bottom: 6px; }
+    .contact { margin-top: 24px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
+    .contact-label {
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 8px;
     }
-    .back:hover { background: #1b5e20; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="check">&#10003;</div>
-    <h1>Thank You!</h1>
-    <p>Your request has been sent. We'll get back to you as soon as possible.</p>
-    <p>For urgent pest issues, call us directly.</p>
-    <a href="/" class="back">Back to Home</a>
-  </div>
-</body>
-</html>
-
+    .phone {
+      font-size: 1.5rem; font-weight: 700; color: #2e7d32; text-decoration: none;
+      display: inline-block; margin-bottom: 4px;
+    }
+    .phone:hover { text-decoration: underline; }
+    .hours { font-size: 0.9rem; color: #777; }
+    .coupon {
+      margin-top: 28px; background: linear-gradient(135deg, #fff8e1, #fff3cd);
+      border: 3px dashed #f9a825; border-radius: 12px; padding: 28px 24px; position: relative;
+    }
+    .coupon::before, .coupon::after {
+      content: ''; position: absolute; width: 24px; height: 24px; background: #f0f4f0;
+      border-radius: 50%; top: 50%; transform: translateY(-50%);
+    }
+    .coupon::before { left: -14px; }
+    .coupon::after { right: -14px; }
+    .bill { width: 120px; margin: 0 auto 16px; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15)); }
+    .coupon-title {
+      font-size: 1.1rem; font-weight: 700; color: #e65100; margin-bottom: 8px;
+      text-transform: uppercase; letter-spacing: 1px;
+    }
+    .coupon-amount { font-size: 2.4rem; font-weight: 900; color: #2e7d32; line-height: 1
