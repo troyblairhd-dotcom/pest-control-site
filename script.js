@@ -1,5 +1,5 @@
 // Form handler for Custom Pest Control Scottsboro
-// Posts form data to /submit (routed to custompest-form Worker)
+// Posts form data to https://custompestscottsboro.com/submit (routed to custompest-form Worker)
 
 document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('quoteForm');
@@ -26,16 +26,22 @@ document.addEventListener('DOMContentLoaded', function () {
     // Collect form data
     var formData = new FormData(form);
 
-    fetch('/submit', {
+    fetch('https://custompestscottsboro.com/submit', {
       method: 'POST',
       body: formData
     })
       .then(function (response) {
-        if (response.ok || response.redirected) {
-          // Form handler returns a 302 redirect to thanks.html
-          window.location.href = '/thanks.html';
+        if (response.ok) {
+          return response.json();
         } else {
           throw new Error('Server returned ' + response.status);
+        }
+      })
+      .then(function (data) {
+        if (data && data.success) {
+          window.location.href = '/thanks.html';
+        } else {
+          throw new Error('Submission failed');
         }
       })
       .catch(function (err) {
@@ -47,4 +53,3 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
-
