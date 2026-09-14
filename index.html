@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Pest Scottsboro | Free Quote</title>
+  <meta name="description" content="Request a free pest control quote in Scottsboro, AL." />
+
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --text:#111827; --muted:#6b7280;
+      --brand:#0b2a4a; --accent:#1a73e8; --border:#cfd6df;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:0 16px}
+    header{background:var(--brand);color:#fff;padding:22px 0}
+    .hero{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .logo{
+      width:86px;height:86px;border-radius:14px;background:#fff;
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,.18);
+    }
+    .logo img{max-width:100%;max-height:100%;display:block}
+    h1{margin:0;font-size:28px;line-height:1.1}
+    .sub{margin:6px 0 0;color:rgba(255,255,255,.9)}
+    main{padding:22px 0 34px}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:900px){.grid{grid-template-columns:1.05fr .95fr}}
+    .card{
+      background:var(--card);border-radius:14px;padding:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08)
+    }
+    h2{margin:0 0 10px;font-size:18px}
+    p{margin:0 0 12px;line-height:1.45}
+    .note{font-size:13px;color:var(--muted)}
+    form{display:grid;gap:12px}
+    .two{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:720px){.two{grid-template-columns:1fr 1fr}}
+    label{font-size:13px;font-weight:700}
+    input, textarea{
+      width:100%;padding:10px 12px;border:1px solid var(--border);
+      border-radius:10px;font-size:15px;background:#fff;
+    }
+    textarea{min-height:120px;resize:vertical}
+    button{
+      background:var(--accent);color:#fff;border:0;padding:12px 14px;
+      border-radius:10px;font-size:16px;font-weight:700;cursor:pointer;
+    }
+    button:disabled{opacity:.65;cursor:not-allowed}
+    .status{min-height:18px;font-size:14px}
+    .ok{color:#0f7a2b}
+    .err{color:#b00020}
+    footer{padding:18px 16px;color:#555;text-align:center}
+    .hp{display:none !important} /* honeypot field */
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="hero">
+        <!-- Put your logo file in the same folder as index.html and name it logo.png (or change the src). -->
+        <div class="logo">
+          <img src="logo.png" alt="Custom Pest Scottsboro logo" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <h1>Custom Pest Scottsboro</h1>
+          <div class="sub">Request a free quote — we’ll contact you soon.</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="grid">
+        <section class="card">
+          <h2>Request service / Free quote</h2>
+          <p class="note">Fill out the form below. Your request will be emailed to our office.</p>
+
+          <form id="quoteForm">
+            <!-- Honeypot (spam trap). Leave this hidden field empty. -->
+            <div class="hp">
+              <label for="website">Website</label>
+              <input id="website" name="website" autocomplete="off">
+            </div>
+
+            <div class="two">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div>
+                <label for="phone">Telephone</label>
+                <input id="phone" name="phone" autocomplete="tel" required>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div>
+                <label for="address">Address</label>
+                <input id="address" name="address" autocomplete="street-address" required>
+              </div>
+            </div>
+
+            <div>
+              <label for="comments">Comments</label>
+              <textarea id="comments" name="comments" placeholder="Tell us what you’re seeing (ants, roaches, termites, etc.)"></textarea>
+            </div>
+
+            <button id="submitBtn" type="submit">Send request</button>
+            <div id="status" class="status" aria-live="polite"></div>
+          </form>
+
+          <p class="note" style="margin-top:10px;">
+            If this doesn’t send, your Worker endpoint URL is probably not set correctly in <strong>script.js</strong>.
+          </p>
+        </section>
+
+        <aside class="card">
+          <h2>What happens next?</h2>
+          <p>After you submit, we’ll review your information and contact you to schedule service.</p>
+          <p class="note">Serving Scottsboro and surrounding areas.</p>
+
+          <hr style="border:none;border-top:1px solid #eef1f5;margin:14px 0">
+
+          <h2>Need to edit text?</h2>
+          <p class="note">You can change the business name, service area, and wording directly in this file.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <small>© <span id="y"></span> Custom Pest Scottsboro</small>
+  </footer>
+
+  <script>
+    // Year in footer
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- This file should contain ENDPOINT = "https://YOUR-WORKER-URL/submit"; -->
+  <script src="script.js"></script>
+</body>
+</html>
