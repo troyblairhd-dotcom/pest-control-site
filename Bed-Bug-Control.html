@@ -1,1 +1,681 @@
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bed Bug Control in Scottsboro, AL | Custom Pest Control</title>
+  <meta name="description" content="Professional bed bug extermination in Scottsboro, AL. We use Aprehend biopesticide, chemical application, and exclusion for long-term bed bug control with a 90-day warranty program. No heat treatment.">
+  <meta name="keywords" content="bed bug control Scottsboro, bed bug treatment Alabama, bed bug exterminator, Aprehend bed bug treatment, bed bug warranty">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --green: #1a5d1a;
+      --green-dark: #0d3d0d;
+      --green-light: #2d8a2d;
+      --cream: #f7f5f0;
+      --gray: #666;
+      --light-gray: #e8e8e8;
+      --red: #c0392b;
+      --orange: #e67e22;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff;
+    }
+
+    /* Header */
+    header {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+    .logo span { color: var(--orange); }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--orange); }
+    .nav-cta {
+      background: var(--orange);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+    .nav-cta:hover { background: #d35400; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(13,61,13,0.85), rgba(13,61,13,0.85)),
+                  url('https://images.unsplash.com/photo-1582719478252-c3e2b1e1c8e1?w=1600') center/cover;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.95;
+    }
+    .hero-cta {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .hero-cta:hover { background: #d35400; transform: scale(1.05); }
+
+    /* Sections */
+    section { padding: 60px 20px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--green-dark);
+      margin-bottom: 40px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--orange);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Why Not Heat */
+    .why-not-heat {
+      background: var(--cream);
+    }
+    .warning-box {
+      background: #fff;
+      border-left: 5px solid var(--red);
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+    .warning-box h3 {
+      color: var(--red);
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+    }
+    .warning-box ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .warning-box li {
+      padding: 10px 0;
+      padding-left: 30px;
+      position: relative;
+    }
+    .warning-box li::before {
+      content: '\u2716';
+      color: var(--red);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    /* Our Approach */
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .approach-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 35px 25px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+      border-top: 4px solid var(--green);
+    }
+    .approach-card:hover { transform: translateY(-5px); }
+    .approach-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .approach-card h3 {
+      color: var(--green-dark);
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    .approach-card p { color: var(--gray); font-size: 0.95rem; }
+
+    /* Aprehend Section */
+    .aprehend-section {
+      background: linear-gradient(135deg, var(--green-dark), var(--green));
+      color: #fff;
+    }
+    .aprehend-section .section-title { color: #fff; }
+    .aprehend-section .section-title::after { background: var(--orange); }
+    .aprehend-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .aprehend-text h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      color: var(--orange);
+    }
+    .aprehend-text p {
+      margin-bottom: 15px;
+      opacity: 0.95;
+    }
+    .aprehend-features {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .aprehend-features li {
+      padding: 10px 0;
+      padding-left: 35px;
+      position: relative;
+    }
+    .aprehend-features li::before {
+      content: '\u2714';
+      color: var(--orange);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .aprehend-badge {
+      background: rgba(255,255,255,0.1);
+      border: 2px solid var(--orange);
+      border-radius: 15px;
+      padding: 40px;
+      text-align: center;
+    }
+    .aprehend-badge .badge-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .aprehend-badge .badge-desc {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    @media (max-width: 768px) {
+      .aprehend-content { grid-template-columns: 1fr; }
+    }
+
+    /* Warranty Section */
+    .warranty-section { background: var(--cream); }
+    .warranty-banner {
+      background: #fff;
+      border: 3px solid var(--green);
+      border-radius: 15px;
+      padding: 50px;
+      text-align: center;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .warranty-banner h3 {
+      font-size: 1.8rem;
+      color: var(--green-dark);
+      margin-bottom: 20px;
+    }
+    .warranty-banner .warranty-highlight {
+      font-size: 3rem;
+      font-weight: bold;
+      color: var(--orange);
+      margin: 15px 0;
+    }
+    .warranty-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+      text-align: left;
+    }
+    .warranty-feature {
+      padding: 15px;
+      background: var(--cream);
+      border-radius: 8px;
+    }
+    .warranty-feature strong { color: var(--green-dark); display: block; margin-bottom: 5px; }
+
+    /* Process Timeline */
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .step {
+      background: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: relative;
+    }
+    .step-number {
+      background: var(--green);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+    .step h4 { color: var(--green-dark); margin-bottom: 10px; font-size: 1.1rem; }
+    .step p { color: var(--gray); font-size: 0.9rem; }
+
+    /* Form Section */
+    .form-section {
+      background: linear-gradient(rgba(13,61,13,0.9), rgba(13,61,13,0.9)),
+                  url('https://images.unsplash.com/photo-1582719478252-c3e2b1e1c8e1?w=1600') center/cover;
+      color: #fff;
+    }
+    .form-section .section-title { color: #fff; }
+    .form-section .section-title::after { background: var(--orange); }
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.1);
+      padding: 40px;
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+    }
+    .form-group { margin-bottom: 20px; }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 6px;
+      background: rgba(255,255,255,0.95);
+      font-size: 1rem;
+      color: #333;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--orange);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .submit-btn {
+      width: 100%;
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .submit-btn:hover { background: #d35400; }
+    .form-message {
+      text-align: center;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 6px;
+      display: none;
+    }
+    .form-message.success { background: rgba(46,204,113,0.9); display: block; }
+    .form-message.error { background: rgba(231,76,60,0.9); display: block; }
+
+    /* Footer */
+    footer {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+    .footer-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .footer-col h4 {
+      color: var(--orange);
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+    .footer-col p, .footer-col a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+      line-height: 2;
+    }
+    .footer-col a:hover { color: var(--orange); }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .section-title { font-size: 1.5rem; }
+      .warranty-banner .warranty-highlight { font-size: 2rem; }
+      .nav-container { flex-direction: column; gap: 10px; }
+      nav ul { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo">Custom Pest <span>Control</span></a>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/bed-bug-control">Bed Bugs</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Free Inspection</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Bed Bug Control in Scottsboro, AL</h1>
+    <p>Long-lasting bed bug elimination using Aprehend biopesticide, chemical application, and exclusion — backed by our 90-day warranty program. No heat treatment required.</p>
+    <a href="#contact" class="hero-cta">Schedule Your Free Inspection</a>
+  </section>
+
+  <!-- Why Not Heat Treatment -->
+  <section class="why-not-heat">
+    <div class="container">
+      <h2 class="section-title">Why We Don't Recommend Heat Treatment</h2>
+      <div class="warning-box">
+        <h3>Heat treatment sounds good — but it doesn't last</h3>
+        <ul>
+          <li>Bed bugs can survive heat treatment by hiding on the other side of insulation, where the heat simply doesn't penetrate</li>
+          <li>Surviving bugs return to re-infest your home, often within the same year</li>
+          <li>Bed bugs can live without a blood meal for up to <strong>one full year</strong>, meaning even a mostly successful heat treatment can fail when hidden bugs emerge months later</li>
+          <li>Heat treatment is expensive, disruptive, and offers no residual protection — once the heat is gone, there's nothing stopping bed bugs from coming back</li>
+        </ul>
+      </div>
+      <p style="text-align:center; font-size:1.1rem; color:var(--gray); max-width:800px; margin:0 auto;">
+        We take a different approach — one designed for <strong>long-term control</strong>, not just a quick fix that lets the problem return.
+      </p>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Our Bed Bug Treatment Approach</h2>
+      <div class="approach-grid">
+        <div class="approach-card">
+          <div class="approach-icon">\ud83d\udc89</div>
+          <h3>Chemical Application</h3>
+          <p>Targeted chemical treatments applied to cracks, crevices, baseboards, and other harborage areas where bed bugs hide and travel. This eliminates active infestations and creates a residual barrier.</p>
+        </div>
+        <div class="approach-card">
+          <div class="approach-icon">\ud83d\udee1\ufe0f</div>
+          <h3>Exclusion</h3>
+          <p>We seal entry points and harborage areas to prevent bed bugs from spreading between rooms or units. Exclusion is critical for multi-family homes and apartments where re-infestation from neighbors is common.</p>
+        </div>
+        <div class="approach-card">
+          <div class="approach-icon">\ud83d\udcda</div>
+          <h3>Homeowner Education</h3>
+          <p>We walk you through the preventative steps you need to take after treatment — mattress encasements, clutter reduction, monitoring, and what to watch for. An educated homeowner is the best defense against re-infestation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aprehend Section -->
+  <section class="aprehend-section">
+    <div class="container">
+      <h2 class="section-title">The Aprehend Difference</h2>
+      <div class="aprehend-content">
+        <div class="aprehend-text">
+          <h3>Aprehend — Designed for Bed Bug Elimination</h3>
+          <p>Aprehend is a professional biopesticide specifically designed to eliminate bed bug infestations and prevent their reoccurrence. Unlike heat treatment or traditional sprays that only kill on contact, Aprehend uses a natural fungal spore that bed bugs pick up and carry back to their hiding places — spreading the treatment deep into walls, behind insulation, and into cracks where sprays and heat can't reach.</p>
+          <p>Once applied, Aprehend continues working for months, creating a long-lasting barrier that eliminates bed bugs long after we've left your home.</p>
+          <ul class="aprehend-features">
+            <li>Reaches bed bugs hiding behind insulation and deep in walls</li>
+            <li>Continues working for months after application</li>
+            <li>Prevents re-infestation — not just a one-time kill</li>
+            <li>Odorless treatment for all follow-up visits</li>
+            <li>No prep work required</li>
+            <li>No need to evacuate your residence</li>
+          </ul>
+        </div>
+        <div class="aprehend-badge">
+          <div class="badge-title">Aprehend</div>
+          <div class="badge-desc">Biopesticide specifically engineered for bed bug elimination and long-term prevention</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Warranty Section -->
+  <section class="warranty-section">
+    <div class="container">
+      <h2 class="section-title">Our 90-Day Bed Bug Warranty</h2>
+      <div class="warranty-banner">
+        <h3>Long-Term Protection Program</h3>
+        <p>We stand behind our bed bug service with a long-term warranty. Here's how it works:</p>
+        <div class="warranty-highlight">Reapplied Every 90 Days</div>
+        <p>We return every 90 days to reapply Aprehend, keeping your home in a continuously controlled environment where bed bugs cannot establish themselves.</p>
+        <div class="warranty-features">
+          <div class="warranty-feature">
+            <strong>Odorless Follow-Ups</strong>
+            All follow-up visits use an odorless treatment — no chemical smell in your home.
+          </div>
+          <div class="warranty-feature">
+            <strong>No Prep Work</strong>
+            Follow-up treatments require zero preparation on your part. We handle everything.
+          </div>
+          <div class="warranty-feature">
+            <strong>No Evacuation Needed</strong>
+            You don't need to leave your home. Stay comfortable while we work.
+          </div>
+          <div class="warranty-feature">
+            <strong>Continuous Protection</strong>
+            Regular reapplication means bed bugs never get a chance to return.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Our Treatment Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h4>Free Inspection</h4>
+          <p>We inspect your home to confirm bed bug activity, identify the extent of the infestation, and locate harborage areas.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h4>Initial Treatment</h4>
+          <p>Chemical application to active areas, plus Aprehend applied along baseboards, bed frames, and travel paths where bed bugs will encounter it.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h4>Exclusion & Education</h4>
+          <p>We seal entry points and walk you through the preventative steps to take at home — mattress encasements, clutter reduction, and monitoring.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h4>90-Day Reapplication</h4>
+          <p>We return every 90 days to reapply Aprehend — odorless, no prep, no evacuation — keeping your home protected year-round.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="form-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Schedule Your Free Bed Bug Inspection</h2>
+      <form class="contact-form" action="/submit" method="POST">
+        <input type="hidden" name="service" value="Bed Bug Control">
+        <input type="hidden" name="source_page" value="bed-bug-control">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="(256) 555-0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+        <div class="form-group">
+          <label for="address">Home Address</label>
+          <input type="text" id="address" name="address" placeholder="123 Main St, Scottsboro, AL">
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your bed bug problem</label>
+          <textarea id="message" name="message" rows="4" placeholder="When did you first notice bed bugs? Which rooms are affected?"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Request Free Inspection</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>Custom Pest Control</h4>
+        <p>Professional pest control services serving Scottsboro, AL and the surrounding North Alabama area.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/bed-bug-control">Bed Bug Control</a><br>
+        <a href="#contact">Request Inspection</a><br>
+        <a href="#contact">Contact Us</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>Scottsboro, Alabama</p>
+        <p>Serving Jackson County & surrounding areas</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Custom Pest Control. All rights reserved. | Scottsboro, AL
+    </div>
+  </footer>
+
+  <script>
+    // Handle form submission via fetch to /submit endpoint
+    document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = this;
+      const msg = document.getElementById('formMessage');
+      const btn = form.querySelector('.submit-btn');
+      const originalText = btn.textContent;
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => { data[key] = value; });
+
+      try {
+        const response = await fetch('/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (response.ok) {
+          msg.className = 'form-message success';
+          msg.textContent = 'Thank you! We\'ll contact you within 24 hours to schedule your free inspection.';
+          form.reset();
+        } else {
+          msg.className = 'form-message error';
+          msg.textContent = 'Something went wrong. Please call us or try again.';
+        }
+      } catch (err) {
+        msg.className = 'form-message error';
+        msg.textContent = 'Something went wrong. Please call us or try again.';
+      }
+      btn.textContent = originalText;
+      btn.disabled = false;
+    });
+  </script>
+
+</body>
+</html>
