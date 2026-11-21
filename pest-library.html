@@ -1,1 +1,449 @@
-git clone https://x:art_v2_x_50baec1fcfd82e59641110feaaaaa379692f8c15@31b91e7f9954ad8aa334d46f012bd8ed.artifacts.cloudflare.net/git/lee-production/lee-pest-library-page-cbf64595701647fe.git pest-library-page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pest Library | Custom Pest Control Scottsboro</title>
+<meta name="description" content="Identify common pests in Scottsboro, Alabama. Browse our pest library by category with photos, quick facts, and links to detailed identification and treatment guides.">
+<link rel="canonical" href="https://www.custompestscottsboro.com/pest-library">
+
+<!-- ============================================================
+     EDIT ONLY THIS BLOCK
+     1. Set SITE.phone to your real number.
+     2. Set SITE.pestUrlBase to match how your pest ID pages are
+        actually addressed. Each pest's `slug` is appended to it.
+        Examples:
+          "/pests/"            -> /pests/termites
+          "/pest-id/"          -> /pest-id/termites
+          "/"                  -> /termites
+        If a page lives somewhere unusual, give that pest its own
+        `href` and it wins over the base + slug.
+     3. Edit the PESTS array: name, slug, category, blurb.
+     ============================================================ -->
+<script>
+const SITE = {
+  business: "Custom Pest Control",
+  city: "Scottsboro, AL",
+  phone: "(256) 555-0100",          // <-- REPLACE with your real number
+  phoneHref: "tel:+12565550100",     // <-- REPLACE, digits only after tel:
+  pestUrlBase: "/pests/",            // <-- REPLACE with your real URL pattern
+  libraryUrl: "/pest-library"
+};
+
+const PESTS = [
+  // ---- Ants ----
+  { name: "Fire Ant",            slug: "fire-ant",            category: "Ants",        blurb: "Painful stings, mound nests in lawns. Common across north Alabama." },
+  { name: "Carpenter Ant",       slug: "carpenter-ant",       category: "Ants",        blurb: "Large black ants that tunnel into damp or damaged wood." },
+  { name: "Odorous House Ant",   slug: "odorous-house-ant",   category: "Ants",        blurb: "Small brown ants that release a rotten-coconut smell when crushed." },
+  { name: "Pavement Ant",        slug: "pavement-ant",        category: "Ants",        blurb: "Nests in cracks of driveways and sidewalks; forages indoors." },
+
+  // ---- Termites & Wood Destroyers ----
+  { name: "Eastern Subterranean Termite", slug: "subterranean-termite", category: "Termites", blurb: "The most destructive termite in Alabama. Nests in soil below frost line." },
+  { name: "Formosan Termite",    slug: "formosan-termite",    category: "Termites",    blurb: "Aggressive species that builds carton nests and damages wood fast." },
+  { name: "Carpenter Bee",       slug: "carpenter-bee",       category: "Termites",    blurb: "Round holes in fascia and decks. Wood-destroying, not a termite." },
+  { name: "Powderpost Beetle",   slug: "powderpost-beetle",   category: "Termites",    blurb: "Leaves fine sawdust below small exit holes in hardwood." },
+
+  // ---- Cockroaches ----
+  { name: "German Cockroach",    slug: "german-cockroach",    category: "Cockroaches", blurb: "The most common indoor roach. Breeds rapidly in kitchens and baths." },
+  { name: "American Cockroach",  slug: "american-cockroach",  category: "Cockroaches", blurb: "Large reddish roach that favors drains, basements, and sewers." },
+  { name: "Smokybrown Cockroach",slug: "smokybrown-cockroach",category: "Cockroaches", blurb: "Outdoor breeder that moves inside when weather turns cold or wet." },
+  { name: "Oriental Cockroach",  slug: "oriental-cockroach",  category: "Cockroaches", blurb: "Dark, sluggish roach found in damp crawlspaces and leaf litter." },
+
+  // ---- Spiders & Occasional Invaders ----
+  { name: "Brown Recluse",       slug: "brown-recluse",       category: "Spiders",     blurb: "Venomous. Hides in closets, attics, and rarely disturbed areas." },
+  { name: "Black Widow",         slug: "black-widow",         category: "Spiders",     blurb: "Venomous. Webs in garages, sheds, and woodpiles." },
+  { name: "Wolf Spider",         slug: "wolf-spider",         category: "Spiders",     blurb: "Large hunting spider that wanders indoors in fall." },
+  { name: "Cellar Spider",       slug: "cellar-spider",       category: "Spiders",     blurb: "Long-legged daddy long-legs that builds messy webs in corners." },
+  { name: "Scorpion",            slug: "scorpion",            category: "Spiders",     blurb: "Southern stripeless scorpion stings; seeks cool damp shelter." },
+  { name: "Centipede",           slug: "centipede",           category: "Spiders",     blurb: "Fast predator of other insects; prefers damp basements." },
+
+  // ---- Stinging Insects ----
+  { name: "Yellow Jacket",       slug: "yellow-jacket",       category: "Stinging",    blurb: "Aggressive ground nester. Most stings in late summer and fall." },
+  { name: "Paper Wasp",          slug: "paper-wasp",          category: "Stinging",    blurb: "Open-comb nests under eaves and porch ceilings." },
+  { name: "Bald-Faced Hornet",   slug: "bald-faced-hornet",   category: "Stinging",    blurb: "Large grey-black hornet with a teardrop aerial nest." },
+  { name: "European Hornet",     slug: "european-hornet",     category: "Stinging",    blurb: "Large hornet that strips bark and hunts at night around lights." },
+  { name: "Cicada Killer",       slug: "cicada-killer",       category: "Stinging",    blurb: "Big ground wasp. Looks alarming, rarely stings people." },
+
+  // ---- Biting & Blood-Feeding ----
+  { name: "Mosquito",            slug: "mosquito",            category: "Biting",      blurb: "Breeds in standing water. Peak activity spring through fall." },
+  { name: "Bed Bug",             slug: "bed-bug",             category: "Biting",      blurb: "Hides in mattress seams. Requires professional treatment." },
+  { name: "Flea",                slug: "flea",                category: "Biting",      blurb: "Bites pets and people at the ankles. Thrives in humid weather." },
+  { name: "Lone Star Tick",      slug: "lone-star-tick",      category: "Biting",      blurb: "Common in wooded lots. Known to trigger red meat allergy." },
+  { name: "American Dog Tick",   slug: "american-dog-tick",   category: "Biting",      blurb: "Found along trails and tall grass; attaches to dogs and humans." },
+  { name: "Chigger",             slug: "chigger",             category: "Biting",      blurb: "Microscopic mite larvae causing intense itchy welts." },
+
+  // ---- Rodents & Wildlife ----
+  { name: "House Mouse",         slug: "house-mouse",         category: "Rodents",     blurb: "Small, curious rodent. Contaminates food and chews wiring." },
+  { name: "Norway Rat",          slug: "norway-rat",          category: "Rodents",     blurb: "Burrows near foundations and sewers. Large and cautious." },
+  { name: "Roof Rat",            slug: "roof-rat",            category: "Rodents",     blurb: "Agile climber that enters through soffits and roof lines." },
+  { name: "Gray Squirrel",       slug: "squirrel",            category: "Rodents",     blurb: "Chews entry holes into attics and eaves." },
+  { name: "Raccoon",             slug: "raccoon",             category: "Rodents",     blurb: "Tears into soffits and chimneys to den. Major attic damage." },
+  { name: "Opossum",             slug: "opossum",             category: "Rodents",     blurb: "Den under decks and sheds. Carries fleas and parasites." },
+  { name: "Bat",                 slug: "bat",                 category: "Rodents",     blurb: "Colonizes attics. Guano buildup is a health hazard." },
+  { name: "Mole",                slug: "mole",                category: "Rodents",     blurb: "Ridges of raised soil across lawns from tunnel systems." },
+
+  // ---- General Household Pests ----
+  { name: "Silverfish",          slug: "silverfish",          category: "Household",   blurb: "Chews paper, glue, and fabric in humid dark spaces." },
+  { name: "Earwig",              slug: "earwig",              category: "Household",   blurb: "Moisture-loving scavenger that gathers under mulch and siding." },
+  { name: "Millipede",           slug: "millipede",           category: "Household",   blurb: "Mass migrations onto porches after heavy rain." },
+  { name: "Boxelder Bug",        slug: "boxelder-bug",        category: "Household",   blurb: "Swarms sunny south walls in fall, then moves indoors." },
+  { name: "Stink Bug",           slug: "stink-bug",           category: "Household",   blurb: "Overwinters inside walls; releases odor when disturbed." },
+  { name: "Lady Beetle",         slug: "lady-beetle",         category: "Household",   blurb: "Beneficial outdoors, a nuisance clustered indoors in winter." },
+  { name: "Cricket",             slug: "cricket",             category: "Household",   blurb: "Field and house crickets invade basements and garages." },
+  { name: "Fruit Fly",           slug: "fruit-fly",           category: "Household",   blurb: "Breeds in overripe produce and drain residue." },
+  { name: "Drain Fly",           slug: "drain-fly",           category: "Household",   blurb: "Small fuzzy fly breeding in the film inside drains." },
+  { name: "Pantry Moth",         slug: "pantry-moth",         category: "Household",   blurb: "Indian meal moth infesting flour, cereal, and pet food." },
+  { name: "Carpet Beetle",       slug: "carpet-beetle",       category: "Household",   blurb: "Larvae chew wool rugs, upholstery, and stored clothing." }
+];
+</script>
+
+<style>
+  :root{
+    --ink:#16211c;
+    --ink-soft:#4a5a52;
+    --green:#1f6b45;
+    --green-dark:#14492f;
+    --green-tint:#eaf4ee;
+    --amber:#d97706;
+    --line:#dfe7e2;
+    --bg:#ffffff;
+    --bg-alt:#f7faf8;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(22,33,28,.06), 0 8px 24px -12px rgba(22,33,28,.18);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .site-header .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:1rem;padding:.85rem 0;flex-wrap:wrap;
+  }
+  .brand{font-weight:800;font-size:1.05rem;letter-spacing:-.01em;color:var(--green-dark);text-decoration:none}
+  .brand span{color:var(--amber)}
+  .header-actions{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:.45rem;
+    padding:.6rem 1.05rem;border-radius:999px;
+    font-weight:650;font-size:.92rem;text-decoration:none;
+    border:1.5px solid transparent;transition:transform .12s ease, background .15s ease;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--green);color:#fff}
+  .btn-primary:hover{background:var(--green-dark)}
+  .btn-ghost{background:#fff;color:var(--green-dark);border-color:var(--line)}
+  .btn-ghost:hover{background:var(--green-tint)}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:linear-gradient(180deg,var(--green-tint) 0%,#fff 100%);
+    padding:3rem 0 2rem;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-block;font-size:.75rem;font-weight:750;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--green);background:#fff;
+    border:1px solid var(--line);border-radius:999px;padding:.3rem .75rem;margin-bottom:1rem;
+  }
+  .hero h1{
+    font-size:clamp(1.9rem,4.5vw,2.9rem);
+    line-height:1.15;letter-spacing:-.025em;margin:0 0 .75rem;font-weight:800;
+  }
+  .hero p{font-size:1.06rem;color:var(--ink-soft);max-width:62ch;margin:0 0 1.6rem}
+
+  /* ---------- Search ---------- */
+  .search-row{display:flex;gap:.6rem;flex-wrap:wrap;max-width:640px}
+  .search-field{position:relative;flex:1 1 260px}
+  .search-field svg{
+    position:absolute;left:.95rem;top:50%;transform:translateY(-50%);
+    width:18px;height:18px;stroke:var(--ink-soft);fill:none;stroke-width:2;
+  }
+  #pestSearch{
+    width:100%;padding:.85rem 1rem .85rem 2.7rem;
+    font-size:1rem;font-family:inherit;color:var(--ink);
+    background:#fff;border:1.5px solid var(--line);border-radius:999px;
+    outline:none;transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  #pestSearch:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(31,107,69,.12)}
+
+  /* ---------- Filters ---------- */
+  .filters{padding:1.5rem 0 .5rem}
+  .filter-chips{display:flex;gap:.5rem;flex-wrap:wrap}
+  .chip{
+    font-family:inherit;font-size:.88rem;font-weight:600;
+    padding:.5rem .95rem;border-radius:999px;cursor:pointer;
+    background:#fff;color:var(--ink-soft);
+    border:1.5px solid var(--line);
+    transition:all .14s ease;
+  }
+  .chip:hover{border-color:var(--green);color:var(--green-dark)}
+  .chip[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
+
+  /* ---------- Grid ---------- */
+  .library{padding:1.25rem 0 4rem}
+  .result-count{
+    font-size:.88rem;color:var(--ink-soft);margin:0 0 1.1rem;
+    font-variant-numeric:tabular-nums;
+  }
+  .pest-grid{
+    display:grid;gap:1rem;
+    grid-template-columns:repeat(auto-fill,minmax(258px,1fr));
+  }
+  .pest-card{
+    display:flex;flex-direction:column;
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:1.15rem 1.2rem 1.05rem;text-decoration:none;color:inherit;
+    box-shadow:var(--shadow);
+    transition:transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+  }
+  .pest-card:hover{
+    transform:translateY(-3px);
+    border-color:var(--green);
+    box-shadow:0 2px 4px rgba(22,33,28,.06), 0 16px 32px -16px rgba(31,107,69,.4);
+  }
+  .pest-card:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+  .pest-tag{
+    align-self:flex-start;font-size:.68rem;font-weight:750;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--green-dark);
+    background:var(--green-tint);border-radius:999px;padding:.22rem .6rem;margin-bottom:.7rem;
+  }
+  .pest-card h3{
+    margin:0 0 .4rem;font-size:1.06rem;font-weight:750;letter-spacing:-.012em;
+    color:var(--green-dark);
+  }
+  .pest-card p{margin:0 0 1rem;font-size:.9rem;color:var(--ink-soft);flex:1}
+  .pest-link{
+    font-size:.85rem;font-weight:700;color:var(--green);
+    display:inline-flex;align-items:center;gap:.3rem;
+  }
+  .pest-card:hover .pest-link{gap:.55rem}
+  .pest-link::after{content:"→";transition:transform .16s ease}
+
+  .empty{
+    display:none;padding:3rem 1rem;text-align:center;
+    color:var(--ink-soft);border:1.5px dashed var(--line);border-radius:var(--radius);
+  }
+  .empty strong{display:block;color:var(--ink);margin-bottom:.35rem;font-size:1.05rem}
+
+  /* ---------- CTA ---------- */
+  .cta{
+    background:var(--green-dark);color:#fff;
+    padding:3rem 0;text-align:center;
+  }
+  .cta h2{margin:0 0 .6rem;font-size:clamp(1.4rem,3vw,1.9rem);letter-spacing:-.02em}
+  .cta p{margin:0 auto 1.5rem;max-width:52ch;color:#c8ded3;font-size:1rem}
+  .cta .btn-primary{background:#fff;color:var(--green-dark)}
+  .cta .btn-primary:hover{background:var(--green-tint)}
+  .cta .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+  .cta .btn-ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* ---------- Footer ---------- */
+  .site-footer{
+    padding:2rem 0;border-top:1px solid var(--line);
+    font-size:.85rem;color:var(--ink-soft);text-align:center;
+  }
+  .site-footer a{color:var(--green-dark);font-weight:600}
+
+  @media (max-width:560px){
+    .hero{padding:2.25rem 0 1.75rem}
+    .pest-grid{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">Custom Pest <span>Control</span></a>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="/">Home</a>
+      <a class="btn btn-primary" id="headerPhone" href="#">Call Now</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Pest Library</span>
+    <h1>Identify what's bugging you.</h1>
+    <p>
+      Every pest we treat in Scottsboro and Jackson County, organized by category.
+      Find your pest, learn what you're dealing with, and jump straight to the
+      identification and treatment guide.
+    </p>
+    <div class="search-row">
+      <div class="search-field">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="pestSearch" type="search" placeholder="Search pests — try &quot;termite&quot; or &quot;roach&quot;" aria-label="Search the pest library" autocomplete="off">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="filters">
+  <div class="wrap">
+    <div class="filter-chips" id="filterChips" role="group" aria-label="Filter by category"></div>
+  </div>
+</section>
+
+<main class="library">
+  <div class="wrap">
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+    <div class="pest-grid" id="pestGrid"></div>
+    <div class="empty" id="emptyState">
+      <strong>No pests match that search.</strong>
+      Try a different word, or clear the filter to see the full library.
+    </div>
+  </div>
+</main>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Not sure what you're looking at?</h2>
+    <p>Send us a photo or give us a call. We'll identify it and tell you whether it's a problem worth treating.</p>
+    <a class="btn btn-primary" id="ctaPhone" href="#">Call Now</a>
+    <a class="btn btn-ghost" href="/contact">Request an Inspection</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> Custom Pest Control &middot; Scottsboro, AL &middot; <a id="footerPhone" href="#">Call Now</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var grid       = document.getElementById("pestGrid");
+  var chipsWrap  = document.getElementById("filterChips");
+  var searchBox  = document.getElementById("pestSearch");
+  var countEl    = document.getElementById("resultCount");
+  var emptyEl    = document.getElementById("emptyState");
+
+  var activeCategory = "All";
+  var query = "";
+
+  /* ---- Resolve a pest's destination URL ---- */
+  function hrefFor(pest) {
+    if (pest.href) return pest.href;
+    var base = SITE.pestUrlBase || "/";
+    if (base.slice(-1) !== "/") base += "/";
+    return base + pest.slug;
+  }
+
+  /* ---- Wire the phone number everywhere ---- */
+  ["headerPhone", "ctaPhone", "footerPhone"].forEach(function (id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.href = SITE.phoneHref;
+      el.textContent = "Call " + SITE.phone;
+    }
+  });
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ---- Build category chips ---- */
+  var categories = ["All"];
+  PESTS.forEach(function (p) {
+    if (categories.indexOf(p.category) === -1) categories.push(p.category);
+  });
+
+  categories.forEach(function (cat) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "chip";
+    b.textContent = cat;
+    b.setAttribute("aria-pressed", cat === "All" ? "true" : "false");
+    b.addEventListener("click", function () {
+      activeCategory = cat;
+      Array.prototype.forEach.call(chipsWrap.children, function (c) {
+        c.setAttribute("aria-pressed", c === b ? "true" : "false");
+      });
+      render();
+    });
+    chipsWrap.appendChild(b);
+  });
+
+  /* ---- Render the grid ---- */
+  function render() {
+    var q = query.trim().toLowerCase();
+
+    var matches = PESTS.filter(function (p) {
+      var inCat = activeCategory === "All" || p.category === activeCategory;
+      if (!inCat) return false;
+      if (!q) return true;
+      return (
+        p.name.toLowerCase().indexOf(q) !== -1 ||
+        p.category.toLowerCase().indexOf(q) !== -1 ||
+        (p.blurb || "").toLowerCase().indexOf(q) !== -1
+      );
+    });
+
+    grid.innerHTML = "";
+
+    matches.forEach(function (p) {
+      var a = document.createElement("a");
+      a.className = "pest-card";
+      a.href = hrefFor(p);
+
+      var tag = document.createElement("span");
+      tag.className = "pest-tag";
+      tag.textContent = p.category;
+
+      var h3 = document.createElement("h3");
+      h3.textContent = p.name;
+
+      var para = document.createElement("p");
+      para.textContent = p.blurb || "";
+
+      var link = document.createElement("span");
+      link.className = "pest-link";
+      link.textContent = "View identification guide";
+
+      a.appendChild(tag);
+      a.appendChild(h3);
+      a.appendChild(para);
+      a.appendChild(link);
+      grid.appendChild(a);
+    });
+
+    emptyEl.style.display = matches.length ? "none" : "block";
+    countEl.textContent = matches.length
+      ? "Showing " + matches.length + " of " + PESTS.length + " pests"
+      : "";
+  }
+
+  /* ---- Search (debounced) ---- */
+  var timer;
+  searchBox.addEventListener("input", function (e) {
+    query = e.target.value;
+    clearTimeout(timer);
+    timer = setTimeout(render, 120);
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
+
